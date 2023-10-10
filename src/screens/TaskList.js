@@ -1,20 +1,20 @@
 import React from 'react';
+import Task from './Task';
 
-const TaskList = ({ tasks }) => {
-    console.log("helooo", tasks);
+const TaskList = ({ tasks, deleteTask }) => { 
+
     return (
-        <div class='d-flex flex-column justify-content-center'>
-            <di><h1>Tasks</h1></di>
-            <div>
-                {tasks.map((task) => (
-                    <div 
-                        class='card task-card text-start px-5 py-1 m-1'
-                        key={task._id} >
-                        <h2>{task.title}</h2>
-                    </div>
-                ))}
+        <div className='container-fluid'>
+            <div className='row'>
+                <div className='col'>
+                    <h1 className='header'>Tasks</h1>
+                </div>
             </div>
-            
+            <div className='row row-cols-1 row-cols-lg-2'>
+                {tasks.map((task) => (
+                    <Task task={task} deleteTask={deleteTask}/>
+                ))}
+            </div>            
         </div>
     );
 };
