@@ -1,51 +1,16 @@
-export const tasks = [
-    {
-        "_id": 1,
-        "title": "title 1",
-        "description":  "description 1"
-    },
-    {
-        "_id": 2,
-        "title": "title 2",
-        "description":  "description 2"
-    },
-    {
-        "_id": 3,
-        "title": "title 3",
-        "description":  "description 3"
-    },
-    {
-        "_id": 4,
-        "title": "title 4",
-        "description":  "description 4"
-    },
-    {
-        "_id": 5,
-        "title": "title 5",
-        "description":  "description 5"
-    },
-    {
-        "_id": 6,
-        "title": "title 6",
-        "description":  "description 6"
-    },
-    {
-        "_id": 7,
-        "title": "title 7",
-        "description":  "description 7"
-    },
-    {
-        "_id": 8,
-        "title": "title 8",
-        "description":  "description 8"
-    },
-    {
-        "_id": 9,
-        "title": "title 9",
-        "description":  "description 9"
-    },{
-        "_id": 10,
-        "title": "title 10",
-        "description":  "description 10"
+import { faker } from '@faker-js/faker';
+
+export const getData = () => {
+    const tasks = [];
+
+    for(let i=0; i<10; i++){
+        const _id = i;
+        const title = faker.lorem.sentence();
+        const task = {
+            _id,
+            title
+        };
+        tasks.push(task);
     }
-];
+    return tasks;
+};
