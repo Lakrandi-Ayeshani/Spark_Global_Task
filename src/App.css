@@ -6,10 +6,9 @@
   --app-blue-400: #387de5;
   --app-blue-200: #7eacf2;
   --app-blue-100: #c5d9f6;
-  --app-platinum-100: rgb(252, 255, 246);
-  --app-tuple-gray: #9999a1;
   --app-platinum: #e0e1ddff;
   --app-red-400: rgb(207, 33, 33);
+  --app-red-200: rgb(243, 112, 112);
 
 }
 
@@ -21,18 +20,14 @@
 
 .task-card {
   transform: scale(0.97);
+  border-color: white;
   background-image: linear-gradient(to right, white, var(--app-blue-100), white);
 }
 
 .task-card:hover {
   transform: scale(1);
-  border-color: var(--app-platinum);
   background-image: linear-gradient(to right, white, white)
   /* border-width: 4px; */
-}
-
-.task-card:active {
-  background-image: var(--app-blue-200);
 }
 
 /* .header {
@@ -69,4 +64,8 @@ h1 {
   background-color: var(--app-red-400);
   color: white;
   transform: scale(1.1);
+}
+
+.delete-button:active {
+  background-color: var(--app-red-200);
 }

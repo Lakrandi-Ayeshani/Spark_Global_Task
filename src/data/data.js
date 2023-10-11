@@ -5,7 +5,7 @@ export const getData = () => {
 
     for(let i=0; i<10; i++){
         const _id = i;
-        const title = faker.lorem.sentence();
+        const title = faker.lorem.sentence({min: 4 , max: 5});
         const task = {
             _id,
             title
